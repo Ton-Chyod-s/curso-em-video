@@ -5,17 +5,13 @@ times = (
 )
 
 #a) Os 5 primeiros times.
-print(times[0:5])
+print(f'5 primeiros times: {times[0:5]}')
 #b) Os últimos 4 colocados.
-print(times[-4:])
+print(f'Últimos 4 colocados: {times[-4:]}')
 #c) Times em ordem alfabética.
-print(sorted(times))
+print(f'Ordem alfabética: {sorted(times)}')
 #d) Em que posição está o time da Chapecoense.
-
 for i in times:
-    posicao = 0
     if i == 'chapecoense':
-        posicao += 1
-    else:
-        print('não encontrada na tabela')
-        break
+        print(f'Posição: {times.index("chapecoense")}')
+    
