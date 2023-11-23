@@ -6,7 +6,7 @@ while True:
     else:
         lista_num.append(num)
         print('Numero adicionado com sucesso!')
-        
+
     continuar = str(input('Deseja continuar? [S/N]: '))
     if continuar.lower() == 's':
         continue
