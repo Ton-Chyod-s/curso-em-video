@@ -3,7 +3,9 @@ num_0_20 = ('zero','um','dois','três','quatro','cinco','seis','sete','oito','no
             )
 while True:
     num = int(input('Digite um número entre 0 e 20: '))
-    if num >= 0 or num <= 20:
+    if num >= 0 and num <= 20:
         break
+    else:
+        print('Tente novamente!! ', end='')
 
 print(f'você digitou o numero: {num_0_20[num]}')
