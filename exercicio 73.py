@@ -13,5 +13,5 @@ print(f'Ordem alfabética: {sorted(times)}')
 #d) Em que posição está o time da Chapecoense.
 for i in times:
     if i == 'chapecoense':
-        print(f'Posição: {times.index("chapecoense")}')
+        print(f'Posição: {times.index("chapecoense")+1}')
     
