@@ -1,18 +1,13 @@
-par = list()
-impar = list()
-princ = []
+princ = [[], []]
 
 for i in range(0,8):
     numero = int(input(f"Digite o {i}º valor: "))
-    result = numero % 2
-    if result == 0:
-        par.append(numero)
+    if numero % 2 == 0:
+        princ[0].append(numero)
     else:
-        impar.append(numero)
-
-princ.append(sorted(par[:]))
-princ.append(sorted(impar[:]))
-
-print(princ)
-
+        princ[1].append(numero)
+print('-=' * 30)
+print(f'Os numeros pares são {sorted(princ[0])}')
+print(f'Os numeros impares são {sorted(princ[1])}')
+print('-=' * 30)
 
