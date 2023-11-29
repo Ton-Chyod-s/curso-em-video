@@ -1,24 +1,29 @@
-"""Exercício Python 094: Crie um programa que leia nome, sexo e idade de várias pessoas,
-guardando os dados de cada pessoa em um dicionário e todos os dicionários em uma lista. 
-No final, mostre: A) Quantas pessoas foram cadastradas B) A média de idade C) Uma lista 
-com as mulheres D) Uma lista de pessoas com idade acima da média"""
 formulario = []
 pessoa = {}
 soma_idade = 0
 mulheres = []
 acima_idade = []
 
-while True:
-    pessoa['Nome'] = str(input('Nome: '))
-    pessoa['Sexo'] = str(input('Sexo: '))
-    pessoa['Idade'] = int(input('Idade: '))
 
-    formulario.append(pessoa.copy())
-    
+pessoa['Nome'] = str(input('Nome: '))
+while True:
+    pessoa['Sexo'] = str(input('Sexo: [M/F]'.upper()[0]))
+    if pessoa['Sexo'] in 'M/F':
+        break
+    print('ERRO! Por favor, digite apenas M ou F.')
+
+pessoa['Idade'] = int(input('Idade: '))
+
+formulario.append(pessoa.copy())
+while True:
     continuar = str(input('Deseja continuar? [S/N]'))
     if continuar in 'Nn':
         break
-    
+    print('ERRO! Responda apenas S ou N.')
+
+    if continuar == 'S':
+        break
+
 print(f'Pessoas cadastradas {len(formulario)}')
 
 for num, valor in enumerate(formulario):
@@ -32,10 +37,19 @@ for num, valor in enumerate(formulario):
     if sexo in 'Ff':
         mulheres.append(formulario[num]['Nome'])
 
-print(f'As mulheres cadastradas foram  {mulheres}')
+print(f'As mulheres cadastradas foram ',end=' ')
+for valor in mulheres:
+    print(valor, end=',')
+print()
 
 for num, valor in enumerate(formulario):
     if formulario[num]['Idade'] > soma_idade / len(formulario):
         acima_idade.append(valor)
 
-print(f'Lista das pessoas que estão acima da média {acima_idade}')
+print(f'Lista das pessoas que estão acima da média')
+for valor in acima_idade:
+    for num, valor in valor.items():
+        print(f'{num} = {valor}', end='; ')
+    print()
+
+print('FINALIZADO!!')   
