@@ -1,5 +1,3 @@
-from random import randint
-
 def maior(*args):
     print('-=' * 20)
     print('Analisando os valores passado...')
