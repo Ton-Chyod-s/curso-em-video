@@ -3,10 +3,9 @@ def maior(*args):
     print('Analisando os valores passado...')
     maior = 0
     for i in args:
+        print(i, end=' ')
         if i > maior:
             maior = i
-    for i in args:
-        print(i, end=' ')
     print(f'Foram informados {len(args)} ao todo.')
     print(f'O maior valor informado foi {maior}')
 
