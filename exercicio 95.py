@@ -1,32 +1,41 @@
-time = {}
-dados = []
+time = []
+jogador = {}
 gol = []
-contador = 0
-
 while True:
-    dados.append(str(input('Nome do jogador: ')))
-    dados.append(int(input(f'Quantas partidas {dados[0]} jogou? ')))
-    for i in range(dados[1]):
+    jogador['nome'] = str(input('Nome do jogador: '))
+    partidas = int(input(f'Quantas partidas {jogador["nome"]} jogou? '))
+    for i in range(partidas):
         gol.append(int(input(f'Quantos gols na partida {i}? ')))
-    time[f'Jogador {contador}'] = dados[:]
-    contador += 1
-    dados.clear()
-    cancelar = str(input('Deseja continuar? [S/N]')).upper()
+    jogador['gols'] = gol[:]
+    jogador['total'] = sum(gol)
+    time.append(jogador.copy())
+    gol.clear()
+    jogador.clear()
+    while True:
+        cancelar = str(input('Deseja continuar? [S/N] ')).upper()[0]
+        if cancelar in 'SN':
+            break
+        print('ERRO! Responda S ou N.')
     if cancelar == 'N':
         break
-
-dados.append(gol[:])
-print(time)
-
-"""
-dados['Total'] = sum(i for i in gol)
-print('-=' * 20)
-print(dados)
-print('-=' * 20)
-for num, valor in dados.items():
-    print(f'O campo {num} tem o valor {valor}')
-print('-=' * 20)
-print(f'O jogador {dados["Nome"]} jogou {len("gols")} partidas.')
-for num, valor in enumerate(gol):
-    print(f'=> Na partida {num}, fez {valor} gols.')
-print(f'Foi um total de {sum(gol)} gols.')"""
+print('-=' * 30)
+print(f"{'cod':<2} {'name':<18} {'gols':<18} {'total':>5}")
+print('-' * 48)
+for num, valor in enumerate(time):
+    print(f'{num:<3}', end=' ')
+    for i, v in valor.items():
+        print(f'{str(v):<18}', end=' ' )
+    print()
+print('-' * 48)
+while True:
+    mostrar = int(input('Quer mostrar os dados de qual jogador? (999 para parar) '))
+    if mostrar == 999:
+        print('-- VOLTE SEMPRE --')
+        break
+    if mostrar >= len(time):
+        print(f'ERRO! Não existe jogador de código {mostrar}')
+    else:
+        print(F'--> LEVANTAMENTO DO JOGADOR {valor["nome"]}: ')
+        for num, valor in enumerate(time[mostrar]['gols']):
+            print(f'  => No jogo {num} fez {valor} gols.')
+        print(f'Foi um total de {time[mostrar]["total"]} gols')
