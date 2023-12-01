@@ -1,4 +1,4 @@
-from ex107 import moeda
+from ex108 import moeda
 
 num= float(input('Digite um preço: R$'))
 print(f'Aumentando 10%, temos R${moeda.aumentar(num,10)}')
