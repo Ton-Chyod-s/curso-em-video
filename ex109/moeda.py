@@ -1,21 +1,21 @@
-def aumentar(num,aumentar):
+def aumentar(num,aumentar,formato=False):
     res = num + (num * aumentar/100)
-    return res
+    return res if formato is False else moeda(res)
 
 
-def diminuir(num,diminuir):
+def diminuir(num,diminuir,formato=False):
     res = num - (num * diminuir/100)
-    return res
+    return res if formato is False else moeda(res)
 
 
-def dobro(num):
+def dobro(num,formato=False):
     res = num * 2
-    return res
+    return res if formato is False else moeda(res)
 
 
-def metade(num):
+def metade(num,formato=False):
     res = num / 2
-    return res
+    return res if formato is False else moeda(res)
 
 
 def moeda(preco=0, moeda='R$'):
