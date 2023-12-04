@@ -1,4 +1,3 @@
-from ex111.utilidadesCeV import moeda
+from ex112.utilidadesCeV import dado
 
-num= float(input('Digite um preço: R$'))
-moeda.resumo(num,10,30)
+dado()
