@@ -27,9 +27,10 @@ def menu(*args):
     return num_op
 
 
-def criar(txt,arquivo):
-    with open(f'{arquivo}.txt','w') as person:
-        person.write(txt)
+def criar(arquivo):
+    with open(f'{arquivo}.txt','x'):
+        pass
+        
 
 
 def ler(arquivo):
@@ -38,7 +39,7 @@ def ler(arquivo):
     return arquivo
 
 
-def adicionando(txt,arquivo):
+def adicionando(txt='desconhecido',arquivo='pessoas'):
     with open(f'{arquivo}.txt','a') as person:
         person.write(f' {txt}')
 
