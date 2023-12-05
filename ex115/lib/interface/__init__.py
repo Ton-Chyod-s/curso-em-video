@@ -1,3 +1,6 @@
+from pathlib import Path
+import os
+
 def linha(tamanho = 42):
     return '-' * tamanho
 
@@ -27,10 +30,14 @@ def menu(*args):
     return num_op
 
 
-def criar(arquivo):
-    with open(f'{arquivo}.txt','x'):
-        pass
-        
+def criar(arquivo,diretorio):
+    diretorio = Path(diretorio)
+
+    if diretorio.exists():
+        if f'{arquivo}.txt' not in os.listdir(diretorio):
+            file = diretorio / f'{arquivo}.txt'
+            file.touch()
+            print(f'Arquivo {arquivo}.txt criado com sucesso!')
 
 
 def ler(arquivo):
@@ -39,11 +46,20 @@ def ler(arquivo):
     return arquivo
 
 
-def adicionando(txt='desconhecido',arquivo='pessoas'):
+def visual_ler(arquivo):
+    pessoas = ler(arquivo).split(',')
+    for i in range(0,len(pessoas),2):
+        try:
+            print(f'Nome: {pessoas[i]}\t\t\t', f'Idade: {pessoas[i+1]}')
+        except:
+            pass
+
+
+def adicionando(txt='desconhecido',arquivo='pessoa'):
     with open(f'{arquivo}.txt','a') as person:
-        person.write(f' {txt}')
+        person.write(f'{txt},')
 
 
 if __name__ == '__main__':
-    menu('Ver pessoas cadastradas','Cadastrar nova Pessoa','Sair do sistema')
+    pass
     
