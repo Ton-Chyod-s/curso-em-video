@@ -50,7 +50,7 @@ def visual_ler(arquivo):
     pessoas = ler(arquivo).split(',')
     for i in range(0,len(pessoas),2):
         try:
-            print(f'Nome: {pessoas[i]}\t\t\t', f'Idade: {pessoas[i+1]}')
+            print(f'{pessoas[i]:<30}{pessoas[i+1]:>3} anos')
         except:
             pass
 
@@ -58,6 +58,7 @@ def visual_ler(arquivo):
 def adicionando(txt='desconhecido',arquivo='pessoa'):
     with open(f'{arquivo}.txt','a') as person:
         person.write(f'{txt},')
+    return txt
 
 
 if __name__ == '__main__':

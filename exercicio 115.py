@@ -11,10 +11,11 @@ while True:
     elif numero > 3 or numero < 0:
         print(f'\033[031mDigite uma opção válida\033[m')
     elif numero == 1:
-        cabecalho(f'Opção 1')
+        cabecalho(f'Opção de listar o conteúdo de um arquivo')
         visual_ler(arquivo)
     else:  
-        cabecalho(f'Opção 2')
-        adicionando(str(input('Digite o nome: ')),arquivo)
-        adicionando(str(input('Digite a idade: ')),arquivo)
+        cabecalho(f'Novo Cadastro')
+        nome = adicionando(str(input('Digite o nome: ')),arquivo)
+        adicionando(leiaInt('Digite a idade: '),arquivo)
+        print(f'Novo registro de {nome} adicionado.')
     sleep(.2)
