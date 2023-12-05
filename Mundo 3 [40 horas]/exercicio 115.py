@@ -1,7 +1,7 @@
 from ex115.lib.interface import *
 from time import sleep
 
-criar('pessoa','C:/Users/User/Documents/GitHub/curso-em-video')
+criar('pessoa','C:/Users/User/Documents/GitHub/curso-em-video/Mundo 3 [40 horas]')
 arquivo = 'pessoa'
 while True:
     numero = menu('Ver pessoas cadastradas','Cadastrar nova Pessoa','Sair do sistema')
