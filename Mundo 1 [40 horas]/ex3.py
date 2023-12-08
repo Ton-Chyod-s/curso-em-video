@@ -1,4 +1,7 @@
-num = int(input('Primeiro numero: '))
-num2 = int(input('Segundo numero: '))
+dia = int(input('Dia = '))
+mes = str(input('Mês = '))
+ano = int(input('Ano = '))
 
-print(f'A soma é {num + num2}')
+print(dia)
+print(mes)
+print(ano)

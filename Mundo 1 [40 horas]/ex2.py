@@ -1,7 +1,5 @@
-dia = int(input('Dia = '))
-mes = str(input('Mês = '))
-ano = int(input('Ano = '))
+#desafio 01
 
-print(dia)
-print(mes)
-print(ano)
+nome = str(input('Qual seu nome? '))
+print(f'Olá {nome}')
+
