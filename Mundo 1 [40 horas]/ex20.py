@@ -5,5 +5,5 @@ aluno2 = str(input('Digite o nome do segundo aluno: '))
 aluno3 = str(input('Digite o nome do terceiro aluno: '))
 aluno4 = str(input('Digite o nome do quarto aluno: '))
 lista = [aluno,aluno2,aluno3,aluno4]
-escolha = random.choice(lista)
-print(f'O aluno escolhido foi {escolha}')
+random.shuffle(lista)
+print(f'A ordem de apresentação é\n{lista}')
