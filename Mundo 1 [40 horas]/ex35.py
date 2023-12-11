@@ -1,5 +1,5 @@
 print('-=' * 23)
-print('\033[32mAnalisador de Triângulo\033[m')
+print('\033[1;32mAnalisador de Triângulo\033[m')
 print('-=' * 23)
 a = float(input('Digite primeiro segmento: '))
 b = float(input('Digite segundo segmento: '))
