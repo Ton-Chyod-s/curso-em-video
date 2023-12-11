@@ -4,8 +4,8 @@ from time import sleep
 print('-=' * 24)
 numero_pensou = randint(0,5)
 print('Ja pensei, tente adivinhar o número que eu sei!')
-num = int(input('Em que numero pensei de 0 a 5: '))
 print('-=' * 24)
+num = int(input('Em que numero pensei de 0 a 5: '))
 print(f'\033[32mPROCESSANDO...\033[m')
 sleep(.8)
 if num == numero_pensou:
