@@ -11,4 +11,4 @@ sleep(.8)
 if num == numero_pensou:
     print(f'\033[33mPARABÉNS!! Você venceu.. \033[m')
 else:
-    print(f'\033[31mQUE PENA!! Você perdeu.. \033[m')
+    print(f'\033[31mQUE PENA!! Você perdeu..\nEu pensei no {numero_pensou} e não no {num}\033[m')
