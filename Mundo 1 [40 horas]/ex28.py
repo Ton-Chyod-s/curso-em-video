@@ -1,12 +1,14 @@
 from random import randint
 from time import sleep
 
-numero = randint(0,5)
+print('-=' * 24)
+numero_pensou = randint(0,5)
 print('Ja pensei, tente adivinhar o número que eu sei!')
 num = int(input('Em que numero pensei de 0 a 5: '))
+print('-=' * 24)
 print(f'\033[32mPROCESSANDO...\033[m')
-sleep(1)
-if num == numero:
-    print(f'\033[33mVocê venceu!!\nO número que eu escolhi foi {numero}\033[m')
+sleep(.8)
+if num == numero_pensou:
+    print(f'\033[33mPARABÉNS!! Você venceu.. \033[m')
 else:
-    print(f'\033[31mVocê perdeu!!\nO número que eu escolhi foi {numero}\033[m')
+    print(f'\033[31mQUE PENA!! Você perdeu.. \033[m')
