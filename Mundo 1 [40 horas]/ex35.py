@@ -9,7 +9,7 @@ cond1 = (b - c) < a < b + c
 cond2 = (a - c) < b < a + c
 cond3 = (a - b) < c < a + b
 if cond1 and cond2 and cond3:
-    res = 'PODEM FORMAR'
+    res = '\033[1;32mPODEM FORMAR\033[m'
 else:
-    res = 'NÃO PODEM FORMAR'
-print(f'Os segmentos acima {res} Triângulo!')
+    res = '\033[1;31mNÃO PODEM FORMAR\033[m'
+print(f'Os segmentos acima {res} \033[33mTriângulo!\033[m')
