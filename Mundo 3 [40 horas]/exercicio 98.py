@@ -9,7 +9,7 @@ def contador(inicio, fim, passo):
         passo = 1
     if inicio > fim:
         lista = []
-        for i in range(fim, inicio+1, passo):
+        for i in range(fim, inicio+1, int(passo)):
             lista.append(i)
         lista.reverse()
         for i in lista:
