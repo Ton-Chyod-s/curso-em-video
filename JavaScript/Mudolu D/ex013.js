@@ -22,7 +22,6 @@ switch (diaSemana) {
     case 6:
         console.log('Sabado')
         break
-
+    default:
+        console.log('dia da semana invalido')
 }
-
-console.log(diaSemana)
