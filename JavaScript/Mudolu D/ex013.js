@@ -23,5 +23,5 @@ switch (diaSemana) {
         console.log('Sabado')
         break
     default:
-        console.log('dia da semana invalido')
+        console.log('Dia da semana invalido')
 }
