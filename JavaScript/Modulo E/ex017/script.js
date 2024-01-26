@@ -7,6 +7,7 @@ function gerarTabuada() {
         alert('[ERRO] informe um número válido')
     } else {
         var numeroInt = Number(numeroTexto)
+        tabuada.innerHTML = ""
         for (let c = 0; c < 11; c++) {
             var calculo = numeroInt * c
             let item = document.createElement('option')
