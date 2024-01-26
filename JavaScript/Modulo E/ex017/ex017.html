@@ -9,15 +9,19 @@
 <body>
     <header>
             <h1>
-                Modelo
+                Tabuada
             </h1>
     </header>
     <section>
         <div>
-            primeiro paragrafo
+            <p>
+                Número: 
+                <input type="text" id="num">
+                <input type="button" value="Gerar Tabuada" onclick="gerarTabuada()">
+            </p>
         </div>
-        <div>   
-            segundo paragrafo
+        <div id="res">   
+            <select name="tab" id="selTab" size="11"></select>
         </div>
     </section>
     <footer>
