@@ -4,22 +4,31 @@ function verificar() {
     var txtIdade = document.getElementById('txt1')
     var valorIdade = Number(txtIdade.value)
     var resposta = document.getElementById('res')
-    var masculino = document.getElementById('masc')
-    var idade = anoAtual - valorIdade 
-    if (valorIdade < anoAtual) {
-        if (idade >= 1 && idade < 6) {
-            alert(idade)
-
-        } else if (idade >= 16 && idade < 18) {
-            alert(`${idade} adolescente`)
-
-        } else if (idade >= 18 && idade < 65) {
-            alert(`${idade} adulto`)
-            
-        } else {
-            alerto(`${idade} idoso`)
-        }
+    
+    if (txtIdade.value == 0 || valorIdade > anoAtual) {
+        alert("Veirifique os dados e tente novamente!")
     } else {
-        alert(`deu algo errado ae`)
+        var radioSex = document.getElementsByName('radsex')
+        var idade = anoAtual - valorIdade
+        var genero = ''
+
+        if (radioSex[0].checked) {
+            genero = 'Homen'
+            if (idade >= 1 || idade < 6) {
+            } else if (idade >= 16 || idade < 18) {
+                alert(`${idade} adolescente`)
+    
+            } else if (idade >= 18 || idade < 65) {
+                alert(`${idade} adulto`)
+                
+            } else {
+                alert(`${idade} idoso`)
+            }
+        } else if (radioSex[1].checked) {
+            genero = 'Mulher'
+
+        } 
+        resposta.innerText = `detectamos ${genero} de ${idade}`
+        
     }
-}
+    }
