@@ -1,11 +1,11 @@
 body {
-    background-color: rgb(143, 143, 255);
+    background-color: rgb(153, 153, 190);
     font: normal 11pt Arial;
 }
 
 header {
-    color: white;
     text-align: center;
+    color: azure;
 }
 
 section {
@@ -14,23 +14,15 @@ section {
     padding: 15px;
     width: 500px;
     margin: auto;
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.322);
+    box-shadow: 3px 3px 3px rgb(92, 88, 88);
+  
 }
-
-img {
-    border-radius: 50px;
-    width: 150px;
-    height: 150px;
-}
-
 div {
     text-align: center;
     padding: 8px;
 }
-
 footer {
-    color: white;
     text-align: center;
-    font-style: italic;
+    font: normal 9pt italic;
 
 }
