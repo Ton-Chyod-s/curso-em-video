@@ -17,8 +17,13 @@ section {
     box-shadow: 3px 3px 3px rgb(92, 88, 88);
   
 }
+label {
+    display: block;
+    padding: 10px;
+    text-align: left;
+}
 div {
-    text-align: center;
+    text-align: left;
     padding: 8px;
 }
 footer {
