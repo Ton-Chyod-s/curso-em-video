@@ -12,9 +12,10 @@ section {
     padding: 15px;
     width: 500px;
     margin: auto;
-    border: 15px;
+    border-radius: 15px;
     box-shadow: 3px 3px 3px rgb(126, 119, 119);
 }
+
 
 footer {
     text-align: center;
