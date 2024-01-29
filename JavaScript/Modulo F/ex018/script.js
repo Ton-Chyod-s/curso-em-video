@@ -31,6 +31,8 @@ function verificar(){
     } else {
         alert('[ERRO] informe um número válido')
     }
+    num.value = ""
+    numTxt.focus()
 }
 
 function finalizar () {
@@ -55,7 +57,7 @@ function finalizar () {
             soma += valores[i]
         }
 
-        resultado.innerHTML = `Ao todo temos ${valores.length} números cadastrados.<br><br>O maior valor informado foi ${maior}.<br><br>O menor valor informado foi ${menor}.<br><br>Somando todos os valores, temos ${soma}.<br><br>A média dos valores digitados é ${soma / valores.length.toFixed(2)}.`
+        resultado.innerHTML = `Ao todo temos ${valores.length} números cadastrados.<br><br>O maior valor informado foi ${maior}.<br><br>O menor valor informado foi ${menor}.<br><br>Somando todos os valores, temos ${soma}.<br><br>A média dos valores digitados é ${(soma / valores.length).toFixed(2)}.`
  
     }
 }
