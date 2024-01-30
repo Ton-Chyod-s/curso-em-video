@@ -1,9 +1,16 @@
 @charset  "UTF-8";
 
 body {
-    background-color: rgba(44, 48, 39, 0.151);
+    background-color: #dddddd;
     color: rgb(0, 0, 0);
 }
+div#interface {
+    width: 900px;
+    background-color: white;
+    margin: -20px auto 0px auto;
+    box-shadow: 0px 0px 10px rgb(0, 0, 0,.5);
+}
+
 p {
     text-align: justify;
     text-indent: 50px;
@@ -56,8 +63,23 @@ nav#menu li {
     background-color: rgba(82, 83, 83, 0.233);
     padding: 10px;
     margin: 2px;
+    transition: background-color 1s;
 }
 
 nav#menu h1 {
     display: none;
+}
+
+nav#menu li:hover {
+    background-color: #606060;
+}
+
+nav#menu a {
+    color: black;
+    text-decoration: none;
+}
+
+nav#menu a:hover {
+    color: white;
+    text-decoration: underline;
 }
