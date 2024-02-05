@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Google Glass</title>
     <link rel="stylesheet" href="_css/estilo.css">
+    <link rel="stylesheet" href="_css/form.css">
     <script src="_javascript/funcoes.js"></script>
 </head>
 <body>
@@ -27,51 +28,55 @@
         </nav>
     </header>
 
-Google Glass
-A revolução do Google está chegando
-
-[AQUI ENTRA UMA FOTO]
-
-Menu Principal
-- Home
-- Especificações
-- Fotos
-- Multimídia
-- Fale conosco
-
-Fale Conosco > Contato
-Formulário de Contato
-por Gustavo Guanabara
-Atualizado em 01/Maio/2013
-
-Identificação do Usuário
-    Nome:
-    Senha:
-    E-mail:
-    Sexo:
-        - Masculino
-        - Feminino
-    Data de Nascimento:
-
-Endereço do Usuário
-    Logradouro:
-    Número:
-    Estado:
-    Cidade:
-
-Mensagem do Usuário
-    Grau de Urgência:
-    Mensagem:
-
-Quero um Google Glass
-    Gostaria de adquirir um Google Glass quando disponível
-    Cor:
-    Quantidade:
-    Preço Total: R$
+    <section id="corpo-full">
+        <article id="noticia-principal">
+            <header id="cabecalhoArtigo">
+                <hgroup>
+                    <h3>Fale Conosco > Contato</h3>
+                    <h1>Formulário de Contato</h1>
+                    <h2>por Gustavo Guanabara</h2>
+                    <h3 class="direita">Atualizado em 01/Maio/2013</h3>
+                </hgroup>
+            </header>
 
 
-[BOTÃO ENVIAR]
-
+<form action="">
+    <fieldset id="usuario">
+        <legend>Identificação do Usuário</legend>
+            <p><label for="cnome">Nome:</label> <input type="text" size="20" maxlength="30" placeholder="Nome Completo" id="cnome"></p>
+            <p><label for="csenha">Senha:</label> <input type="password" name="tsenha" id="csenha" maxlength="8" size="4" placeholder="8 Digitos"></p>
+            <p><label for="cmail">E-mail:</label> <input type="email" name="tmail" id="cmail" maxlength="40" size="20" placeholder="E-mail"></p>
+            <fieldset id="sexo"><legend>Sexo</legend>
+                    <input type="radio" name="tsexo" id="sexoMasc" checked><label for="sexoMasc">Masculino</label></input><br>
+                    <input type="radio" name="tsexo" id="sexoFem"><label for="sexoFem">Feminino</label></input>
+            </fieldset>
+            <p>Data de Nascimento: <input type="date" name="tdate" id="cdate"></p>
+    </fieldset>
+    
+    <fieldset id="endereco"> 
+        <legend>Endereço do Usuário</legend>
+            <p>Logradouro: <input type="text" name="trua" id="crua" size="13" maxlength="80" placeholder="Rua/Avenida/travessa..."></p>
+            <p>Número: <input type="number" name="tnumero" id="cnumero" min="0" max="9999"></p>
+            Estado:
+            Cidade:
+    </fieldset>
+    
+    <fieldset id="mensagem">
+        <legend>Mensagem do Usuário</legend>
+        Grau de Urgência:
+        Mensagem:
+    </fieldset>
+    
+    <fieldset id="pedido">
+        <legend>Quero um Google Glass</legend>
+            Gostaria de adquirir um Google Glass quando disponível
+        
+            Cor:
+            Quantidade:
+            Preço Total: R$
+    </fieldset>
+    [BOTÃO ENVIAR]
+</form>
 <footer id="rodape">
     Copyright &copy; 2013 - by Gustavo Guanabara<br>
     Facebook | Twitter </footer>
