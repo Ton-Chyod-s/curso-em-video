@@ -40,7 +40,7 @@
             </header>
 
 
-<form action="">
+<form action="mailto:arqkdias@gmail.com" method="post" id="fcontato">
     <fieldset id="usuario">
         <legend>Identificação do Usuário</legend>
             <p><label for="cnome">Nome:</label> <input type="text" size="20" maxlength="30" placeholder="Nome Completo" id="cnome"></p>
@@ -55,27 +55,47 @@
     
     <fieldset id="endereco"> 
         <legend>Endereço do Usuário</legend>
-            <p>Logradouro: <input type="text" name="trua" id="crua" size="13" maxlength="80" placeholder="Rua/Avenida/travessa..."></p>
-            <p>Número: <input type="number" name="tnumero" id="cnumero" min="0" max="9999"></p>
-            Estado:
-            Cidade:
+            <p><label for="crua">Logradouro: <input type="text" name="trua" id="crua" size="13" maxlength="80" placeholder="Rua/Avenida/travessa..."></label></p>
+            <p><label for="cnumero">Número: <input type="number" name="tnumero" id="cnumero" min="0" max="9999"></label></p>
+            <p><label for="">Estado:</label><select name="test" id="test">
+                <optgroup label="Região Sudeste">
+                    <option value="Rj">Rio de janeiro</option>
+                    <option selected value="Sp">São paulo</option>
+                    <option value="" value="Mg" >Minas gerais</option>
+                </optgroup>
+                <optgroup label="Região Sul">
+                    <option value="Sc">Santa Catarina</option>
+                </optgroup>
+            </select></p>
+            <p><label for="">Cidade:</label>
+            <input type="text" name="tcid" id="ccid" maxlength="40" size="20" placeholder="Sua cidadade" list="cidades"></p>
+            <datalist id="cidades">
+                <option value="Rio de janeiro"></option>
+                <option value="Nova iguaçu"></option>
+                <option value="Niteroi"></option>
+                <option value="Belfo roxo"></option>
+            </datalist>
     </fieldset>
     
     <fieldset id="mensagem">
         <legend>Mensagem do Usuário</legend>
-        Grau de Urgência:
-        Mensagem:
+        <p><label for="">Grau de Urgência:</label>
+        Min<input type="range" name="turg" id="curg" min="0" max="10" step="2">Max</p>
+
+        <p><label for="">Mensagem:</label>
+        <textarea name="tmsg" id="cmsg" cols="45" rows="5" placeholder="Deixe aqui suas mensagem"></textarea></p>
+        
     </fieldset>
     
     <fieldset id="pedido">
         <legend>Quero um Google Glass</legend>
             Gostaria de adquirir um Google Glass quando disponível
         
-            Cor:
-            Quantidade:
-            Preço Total: R$
+            <p>Cor:  <input type="text" name="" id="" ></p>
+            <p>Quantidade: <input type="number"></p>
+            <p>Preço Total: R$ </p>
     </fieldset>
-    [BOTÃO ENVIAR]
+    <input type="button" value="Enviar">
 </form>
 <footer id="rodape">
     Copyright &copy; 2013 - by Gustavo Guanabara<br>
